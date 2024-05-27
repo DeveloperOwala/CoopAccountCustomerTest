@@ -1,10 +1,10 @@
-package com.springboot.employeeAPI;
+package com.springboot.accountCustomerAPI;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EmployeeApiApplicationTests {
+class AccountCustomerApiApplicationTests {
 
 	@Test
 	void contextLoads() {
