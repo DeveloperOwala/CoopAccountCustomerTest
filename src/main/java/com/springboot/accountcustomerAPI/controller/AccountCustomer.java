@@ -15,7 +15,7 @@ public class AccountCustomerController {
  private final AccountCustomerService employeeService;
 s
     public AccountCustomerController(AccountCustomerService accountCustomerService) {
-        this.employeeService = employeeService;
+        this.accountCustomerService = accountCustomerService;
     }
     @GetMapping("/all")
     //get add customers
