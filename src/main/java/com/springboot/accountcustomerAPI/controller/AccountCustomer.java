@@ -40,13 +40,13 @@ s
     //update customer
     @PutMapping("/update")
     public ResponseEntity<AccountCustomer> updateCustomer(@RequestBody AccountCustomer customer){
-        Employee updateCustomer = AccountCustomerService.updateCustomer(customer);
+        AccountCustomer updateCustomer = AccountCustomerService.updateCustomer(customer);
         return  new ResponseEntity<>(updateCustomer, HttpStatus.OK);
     }
     //delete customer by id
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteCustomerById(@PathVariable("id") Long id){
-       employeeService.deleteAccountCustomer(id);
+        AccountCustomerService.deleteAccountCustomer(id);
         return  new ResponseEntity<>(HttpStatus.OK);
     }
 
