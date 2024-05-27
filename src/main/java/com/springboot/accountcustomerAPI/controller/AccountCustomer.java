@@ -18,32 +18,32 @@ s
         this.employeeService = employeeService;
     }
     @GetMapping("/all")
-    public ResponseEntity<List<Employee>> getAllEmployees(){
-        List<Employee> employees = employeeService.findAllEmployees();
+    public ResponseEntity<List<AccountCustomer>> findAllCustomers(){
+        List<AccountCustomer> accountCustomer = accountCustomerService.findAllEmployees();
 
-        return new ResponseEntity<>(employees, HttpStatus.OK);
+        return new ResponseEntity<>(accountCustomer, HttpStatus.OK);
     }
     // get employee by id rest API
     @GetMapping("/{id}")
-    public ResponseEntity<Employee> getEmployeeById(@PathVariable("id") Long id){
-        Employee employee = employeeService.getEmployeeById(id);
+    public ResponseEntity<AccountCustomer> getCustomerById(@PathVariable("id") Long id){
+        AccountCustomer accountCustomer = accountCustomerService.getCustomerById(id);
 
-        return new ResponseEntity<>(employee, HttpStatus.OK);
+        return new ResponseEntity<>(accountCustomer, HttpStatus.OK);
     }
 
     @PostMapping("/add")
-    public ResponseEntity<Employee> addEmployee(@RequestBody Employee employee){
-        Employee newEmployee = employeeService.addEmployee(employee);
-        return  new ResponseEntity<>(newEmployee, HttpStatus.CREATED);
+    public ResponseEntity<AccountCustomer> addCustomer(@RequestBody AccountCustomer customer){
+        AccountCustomer newCustomer = AccountCustomereeService.addCustomer(customer);
+        return  new ResponseEntity<>(newCustomer, HttpStatus.CREATED);
     }
     @PutMapping("/update")
-    public ResponseEntity<Employee> updateEmployee(@RequestBody Employee employee){
-        Employee updateEmployee = employeeService.updateEmployee(employee);
-        return  new ResponseEntity<>(updateEmployee, HttpStatus.OK);
+    public ResponseEntity<AccountCustomer> updateEmployee(@RequestBody AccountCustomer customer){
+        Employee updateCustomer = AccountCustomerService.updateCustomer(customer);
+        return  new ResponseEntity<>(updateCustomer, HttpStatus.OK);
     }
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> deleteEmployee(@PathVariable("id") Long id){
-       employeeService.deleteEmployee(id);
+    public ResponseEntity<?> deleteCustomerById(@PathVariable("id") Long id){
+       employeeService.deleteAccountCustomer(id);
         return  new ResponseEntity<>(HttpStatus.OK);
     }
 

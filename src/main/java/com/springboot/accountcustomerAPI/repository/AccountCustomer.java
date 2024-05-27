@@ -10,5 +10,5 @@ import java.util.Optional;
 public interface AccountCustomerRepository  extends JpaRepository<Employee, Long> {
     void deleteCustomerById(Long id);
 
-    Employee getCustomerById(Long id);
+    AccountCustomer getCustomerById(Long id);
 }

@@ -13,7 +13,7 @@ import java.util.List;
 public class AccountCustomerService {
     private final AccountCustomerRepository accountCustomerRepository;
 
-    public EmployeeService(AccountCustomerRepository accountCustomerRepository) {
+    public AccountCustomerService(AccountCustomerRepository accountCustomerRepository) {
         this.accountCustomerRepository = accountCustomerRepository;
     }
 
