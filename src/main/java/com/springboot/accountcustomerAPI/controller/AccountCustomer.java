@@ -1,7 +1,7 @@
 package com.springboot.accountcustomerAPI.controller;
 
-import com.springboot.accountcustomerAPI.model.Employee;
-import com.springboot.accountcustomerAPI.service.EmployeeService;
+import com.springboot.accountcustomerAPI.model.AccountCustomer;
+import com.springboot.accountcustomerAPI.service.AccountCustomerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
