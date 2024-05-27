@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/customer")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class AccountCustomerController {
- private final AccountCustomerService employeeService;
+ private final AccountCustomerService accountCustomerService;
 s
     public AccountCustomerController(AccountCustomerService accountCustomerService) {
         this.accountCustomerService = accountCustomerService;
