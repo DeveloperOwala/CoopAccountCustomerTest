@@ -18,7 +18,7 @@ s
         this.accountCustomerService = accountCustomerService;
     }
     @GetMapping("/all")
-    //get add customers
+    //get  customers
     public ResponseEntity<List<AccountCustomer>> getAllCustomers(){
         List<AccountCustomer> accountCustomer = accountCustomerService.findAllCustomers();
 
