@@ -18,29 +18,32 @@ s
         this.employeeService = employeeService;
     }
     @GetMapping("/all")
-    public ResponseEntity<List<AccountCustomer>> findAllCustomers(){
-        List<AccountCustomer> accountCustomer = accountCustomerService.findAllEmployees();
+    //get add customers
+    public ResponseEntity<List<AccountCustomer>> getAllCustomers(){
+        List<AccountCustomer> accountCustomer = accountCustomerService.findAllCustomers();
 
         return new ResponseEntity<>(accountCustomer, HttpStatus.OK);
     }
-    // get employee by id rest API
+    // get customer by id rest API
     @GetMapping("/{id}")
     public ResponseEntity<AccountCustomer> getCustomerById(@PathVariable("id") Long id){
         AccountCustomer accountCustomer = accountCustomerService.getCustomerById(id);
 
         return new ResponseEntity<>(accountCustomer, HttpStatus.OK);
     }
-
+     //add customer
     @PostMapping("/add")
     public ResponseEntity<AccountCustomer> addCustomer(@RequestBody AccountCustomer customer){
         AccountCustomer newCustomer = AccountCustomereeService.addCustomer(customer);
         return  new ResponseEntity<>(newCustomer, HttpStatus.CREATED);
     }
+    //update customer
     @PutMapping("/update")
-    public ResponseEntity<AccountCustomer> updateEmployee(@RequestBody AccountCustomer customer){
+    public ResponseEntity<AccountCustomer> updateCustomer(@RequestBody AccountCustomer customer){
         Employee updateCustomer = AccountCustomerService.updateCustomer(customer);
         return  new ResponseEntity<>(updateCustomer, HttpStatus.OK);
     }
+    //delete customer by id
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteCustomerById(@PathVariable("id") Long id){
        employeeService.deleteAccountCustomer(id);
